@@ -3,10 +3,10 @@
 Console.WriteLine("ВВЕДИТЕ ТРЕХЗНАЧНОЕ ЧИСЛО");
 int num = int.Parse(Console.ReadLine() ?? "");
 
-if (num < 100 || num > 1000)
+if (num < 100 || num > 1000) //проверка на трехзначное
     Console.WriteLine("число не трехзначное");
 else
 {
-    int a2 = num / 10 % 10;
+    int a2 = num / 10 % 10; //выделяем вторую цифру
     Console.Write($" Вторая цифра числа: {a2}");
 }
