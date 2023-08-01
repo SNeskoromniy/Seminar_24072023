@@ -5,13 +5,21 @@
 
 Console.WriteLine("ВВЕДИТЕ ЧИСЛО");
 int num = int.Parse(Console.ReadLine() ?? "");
-
 if (num < 100) //проверка на трехзначное
     Console.WriteLine("в числе нет третьей цифры");
-else 
+
+else if (num > 999)
 {
     while (num > 999)
-    num /= 10;
+    {
+        num /= 10;
+    }
+    int a3 = num % 10; //выделяем третью цифру
+    Console.Write($" Третья цифра числа: {a3}");
 }
-int a3 = num % 10; //выделяем третью цифру
-Console.Write($" Третья цифра числа: {a3}");
+else
+{
+    int a3 = num % 10; //выделяем третью цифру
+    Console.Write($" Третья цифра числа: {a3}");
+}
+
